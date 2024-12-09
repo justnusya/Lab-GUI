@@ -21,7 +21,7 @@ namespace Lab_GUI
         }
         public override void HideDrawingBackGround(Graphics graphics)
         {
-            graphics.Clear(Color.White);
+            graphics.Clear(Form1.ActiveForm.BackColor);
         }
         public override void DrawBlack(Graphics graphics)
         {
