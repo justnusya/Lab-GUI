@@ -16,5 +16,13 @@ namespace Lab_GUI
         {
             InitializeComponent();
         }
+
+        private void buttonCircle_Click(object sender, EventArgs e)
+        {
+            Graphics graphics = Form1.ActiveForm.CreateGraphics();
+            Circle circ = new Circle(40, 100, 60);
+            circ.MoveRight(graphics);
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Lab_GUI
 {
@@ -11,13 +12,16 @@ namespace Lab_GUI
         protected int x_cenCoord;
         protected int y_cenCoord;
 
-        public abstract void DrawBlack();
+        public abstract void DrawBlack(Graphics graphics);
         public abstract void HideDrawingBackGround();
-        public void MoveRight(int startX, int startY, int steps)
+        public void MoveRight(Graphics graphics)
         {
-            for (int i = 0; i < steps; i++)
+            for (int i = 0; i < 100; i++)
             {
-                DrawBlack(startX + i, startY);
+                System.Threading.Thread.Sleep(100);
+                graphics.Clear(Color.White);
+                x_cenCoord++;
+                DrawBlack(graphics);
             }
         }
 

@@ -21,11 +21,9 @@ namespace Lab_GUI
         {
 
         }
-        public override void DrawBlack(int x, int y)
+        public override void DrawBlack(Graphics graphics)
         {
-            this.DrawBlack(x, y);
-            Graphics graphics = Form1.ActiveForm.CreateGraphics();
-            graphics.DrawEllipse(Pens.Black, x - radius, y - radius, radius * 2, radius * 2);
+            graphics.DrawEllipse(Pens.Black, x_cenCoord - radius, y_cenCoord - radius, radius * 2, radius * 2);
         }
         
     }

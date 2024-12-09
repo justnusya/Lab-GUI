@@ -54,5 +54,15 @@ namespace Lab_GUI
                 centerX++;
             }
         }
+
+        public override void DrawBlack(Graphics graphics)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void HideDrawingBackGround()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -29,13 +29,34 @@ namespace Lab_GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonCircle = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // buttonCircle
+            // 
+            this.buttonCircle.Location = new System.Drawing.Point(0, 0);
+            this.buttonCircle.Name = "buttonCircle";
+            this.buttonCircle.Size = new System.Drawing.Size(295, 119);
+            this.buttonCircle.TabIndex = 0;
+            this.buttonCircle.Text = "buttonCircle";
+            this.buttonCircle.UseVisualStyleBackColor = true;
+            this.buttonCircle.Click += new System.EventHandler(this.buttonCircle_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonCircle);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonCircle;
     }
 }
 
