@@ -9,11 +9,13 @@ namespace Lab_GUI
 {
     class Rhomb : Figure
     {
-        private int sideLength;
+        private int horDiagLen;
+        private int vertDiagLen;
 
-        public Rhomb(int x, int y, int sideLength)
+        public Rhomb(int x, int y, int horDiagLen, int vertDiagLen)
         {
-            this.sideLength = sideLength;
+            this.horDiagLen = horDiagLen;
+            this.vertDiagLen = vertDiagLen;
             x_cenCoord = x;
             y_cenCoord = y;
         }
@@ -25,10 +27,10 @@ namespace Lab_GUI
         {
             Point[] points = new Point[4]
             {
-                new Point(x_cenCoord, y_cenCoord - sideLength / 2),
-                new Point(x_cenCoord + sideLength / 2, y_cenCoord),
-                new Point(x_cenCoord, y_cenCoord + sideLength / 2), 
-                new Point(x_cenCoord - sideLength / 2, y_cenCoord) 
+            new Point(x_cenCoord, y_cenCoord - vertDiagLen / 2),
+            new Point(x_cenCoord + horDiagLen / 2, y_cenCoord), 
+            new Point(x_cenCoord, y_cenCoord + vertDiagLen / 2),
+            new Point(x_cenCoord - horDiagLen / 2, y_cenCoord)
             };
             graphics.DrawPolygon(Pens.Black, points);
         }
