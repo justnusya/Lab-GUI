@@ -20,7 +20,7 @@ namespace Lab_GUI
             {
                 System.Threading.Thread.Sleep(100);
                 HideDrawingBackGround(graphics);
-                x_cenCoord++;
+                x_cenCoord+=2;
                 DrawBlack(graphics);
             }
         }
