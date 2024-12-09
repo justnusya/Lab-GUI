@@ -31,6 +31,7 @@ namespace Lab_GUI
         {
             this.buttonCircle = new System.Windows.Forms.Button();
             this.buttonRhomb = new System.Windows.Forms.Button();
+            this.buttonSquare = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCircle
@@ -53,11 +54,22 @@ namespace Lab_GUI
             this.buttonRhomb.UseVisualStyleBackColor = true;
             this.buttonRhomb.Click += new System.EventHandler(this.buttonRhomb_Click);
             // 
+            // buttonSquare
+            // 
+            this.buttonSquare.Location = new System.Drawing.Point(456, 436);
+            this.buttonSquare.Name = "buttonSquare";
+            this.buttonSquare.Size = new System.Drawing.Size(185, 88);
+            this.buttonSquare.TabIndex = 2;
+            this.buttonSquare.Text = "buttonSquare";
+            this.buttonSquare.UseVisualStyleBackColor = true;
+            this.buttonSquare.Click += new System.EventHandler(this.buttonSquare_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 536);
+            this.Controls.Add(this.buttonSquare);
             this.Controls.Add(this.buttonRhomb);
             this.Controls.Add(this.buttonCircle);
             this.Name = "Form1";
@@ -70,6 +82,7 @@ namespace Lab_GUI
 
         private System.Windows.Forms.Button buttonCircle;
         private System.Windows.Forms.Button buttonRhomb;
+        private System.Windows.Forms.Button buttonSquare;
     }
 }
 

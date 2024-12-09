@@ -9,60 +9,27 @@ namespace Lab_GUI
 {
     class Square:Figure
     {
-        public Square(int centerX, int centerY, int size, Form1 form1)
+        private int sideLength;
+        public Square(int x, int y, int sideLength)
         {
-            this.centerX = centerX;
-            this.centerY = centerY;
-            this.size = size;
-            this.form1 = form1;
+            this.sideLength = sideLength;
+            x_cenCoord = x;
+            y_cenCoord = y;
         }
-
-        protected int centerX;
-        protected int centerY;
-        protected int size;
-        protected Form1 form1;
-
-        private Point[] GetCurrPoints()
-        {
-            return new Point[] {
-                new Point(centerX - size,  centerY - size),
-                new Point(centerX - size,  centerY + size),
-                new Point(centerX + size,  centerY + size),
-                new Point(centerX + size,  centerY - size),
-            };
-        }
-
-        public void Draw()
-        {
-            Graphics graphics = form1.CreateGraphics();
-            graphics.DrawPolygon(Pens.Black, GetCurrPoints());
-        }
-
-        public void Erase()
-        {
-            Graphics graphics = form1.CreateGraphics();
-            graphics.DrawPolygon(new Pen(form1.BackColor), GetCurrPoints());
-        }
-
-        public void MoveRight()
-        {
-            for (int i = 0; i < 50; i++)
-            {
-                Draw();
-                System.Threading.Thread.Sleep(100);
-                Erase();
-                centerX++;
-            }
-        }
-
-        public override void DrawBlack(Graphics graphics)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void HideDrawingBackGround(Graphics graphics)
         {
-            throw new NotImplementedException();
+            graphics.Clear(Color.White);
+        }
+        public override void DrawBlack(Graphics graphics)
+        {
+            Point[] points = new Point[4]
+            {
+                new Point(x_cenCoord , y_cenCoord),
+                new Point(x_cenCoord, y_cenCoord + sideLength / 2),
+                new Point(x_cenCoord + sideLength/2, y_cenCoord + sideLength / 2),
+                new Point(x_cenCoord + sideLength / 2, y_cenCoord),
+            };
+            graphics.DrawPolygon(Pens.Black, points);
         }
     }
 }

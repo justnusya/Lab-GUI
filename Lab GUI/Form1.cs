@@ -30,5 +30,12 @@ namespace Lab_GUI
         Rhomb rhomb = new Rhomb(10, 30, 50, 40);
         rhomb.MoveRight(graphics);
         }
+
+        private void buttonSquare_Click(object sender, EventArgs e)
+        {
+            Graphics graphics = Form1.ActiveForm.CreateGraphics();
+            Square square = new Square(10, 30, 50);
+            square.MoveRight(graphics);
+        }
     }
 }
