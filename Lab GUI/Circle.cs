@@ -17,9 +17,9 @@ namespace Lab_GUI
             x_cenCoord = x;
             y_cenCoord = y;
         }
-        public override void HideDrawingBackGround()
+        public override void HideDrawingBackGround(Graphics graphics)
         {
-
+            graphics.Clear(Color.White);
         }
         public override void DrawBlack(Graphics graphics)
         {

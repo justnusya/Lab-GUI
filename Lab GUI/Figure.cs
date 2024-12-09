@@ -13,13 +13,13 @@ namespace Lab_GUI
         protected int y_cenCoord;
 
         public abstract void DrawBlack(Graphics graphics);
-        public abstract void HideDrawingBackGround();
+        public abstract void HideDrawingBackGround(Graphics graphics);
         public void MoveRight(Graphics graphics)
         {
             for (int i = 0; i < 100; i++)
             {
                 System.Threading.Thread.Sleep(100);
-                graphics.Clear(Color.White);
+                HideDrawingBackGround(graphics);
                 x_cenCoord++;
                 DrawBlack(graphics);
             }

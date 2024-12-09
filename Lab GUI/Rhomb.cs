@@ -14,7 +14,7 @@ namespace Lab_GUI
             throw new NotImplementedException();
         }
 
-        public override void HideDrawingBackGround()
+        public override void HideDrawingBackGround(Graphics graphics)
         {
             throw new NotImplementedException();
         }
